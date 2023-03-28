@@ -1,0 +1,21 @@
+{
+  "name": "Lazy",
+  "version": "1.0",
+  "description": "Saves a couple of clicks",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["https://*.learn.stoa.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Lazy"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["tabs"]
+}
